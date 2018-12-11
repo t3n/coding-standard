@@ -1,0 +1,26 @@
+{
+  "name": "t3n/coding-standard",
+  "type": "phpcodesniffer-standard",
+  "description": "The t3n Coding Standard is a set of PHPCS rules based on the PSR-2 standard",
+  "homepage": "https://t3n.de/",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "t3n\\Sniffs\\": "src/Sniffs"
+    }
+  },
+  "require": {
+    "php": "^7.1",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+    "slevomat/coding-standard": "^4.8.6",
+    "squizlabs/php_codesniffer": "^3.3.2"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}
