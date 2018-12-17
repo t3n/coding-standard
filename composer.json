@@ -6,7 +6,7 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "t3n\\Sniffs\\": "src/Sniffs"
+      "t3n\\CodingStandard\\": "src/t3n"
     }
   },
   "require": {
@@ -14,9 +14,6 @@
     "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
     "slevomat/coding-standard": "^4.8.6",
     "squizlabs/php_codesniffer": "^3.3.2"
-  },
-  "config": {
-    "sort-packages": true
   },
   "extra": {
     "branch-alias": {
