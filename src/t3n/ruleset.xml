@@ -1,10 +1,6 @@
 <?xml version="1.0"?>
-<ruleset
-        name="t3n"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="../../vendor/squizlabs/php_codesniffer/phpcs.xsd"
->
-    <description>The t3n coding standard. Based on PSR2 and heavily nspired by Doctrine code standard</description>
+<ruleset name="t3n">
+    <description>The t3n coding standard. Based on PSR2 and heavily inspired by Doctrine code standard</description>
     <rule ref="PSR2" />
 
     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
@@ -98,8 +94,6 @@
     </rule>
     <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements"/>
 
-    <rule ref="SlevomatCodingStandard.Classes.SuperfluousAbstractClassNaming"/>
-
     <rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing">
         <properties>
             <property name="linesCountBeforeFirstContent" value="0"/>
@@ -118,6 +112,7 @@
                 "/>
                 <element value="
                     @Flow\,
+                    @ElasticSearch\,
                     @ORM\,
                     @ODM\,
                 "/>
@@ -151,6 +146,9 @@
                 <element value="~^(?:(?!private|protected|static)\S+ )?(?:con|de)structor\.\z~i"/>
                 <element value="~^Created by \S+\.\z~i"/>
                 <element value="~^\S+ [gs]etter\.\z~i"/>
+                <element value="~^Class .+~" />
+                <element value="~^Interface .+~" />
+                <element value="~^Trait .+~" />
             </property>
         </properties>
     </rule>
@@ -311,5 +309,11 @@
     </rule>
     <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace.EmptyLines">
         <severity>5</severity>
+    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.UselessParameterAnnotation">
+        <exclude-pattern>Controller\.php</exclude-pattern>
+    </rule>
+    <rule ref="PEAR.Commenting.FunctionComment.MissingParamTag">
+        <include-pattern>Controller\.php</include-pattern>
     </rule>
 </ruleset>
