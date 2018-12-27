@@ -310,4 +310,10 @@
     <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace.EmptyLines">
         <severity>5</severity>
     </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.UselessParameterAnnotation">
+        <exclude-pattern>Controller\.php</exclude-pattern>
+    </rule>
+    <rule ref="PEAR.Commenting.FunctionComment.MissingParamTag">
+        <include-pattern>Controller\.php</include-pattern>
+    </rule>
 </ruleset>
