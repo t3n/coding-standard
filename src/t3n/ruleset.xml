@@ -199,58 +199,41 @@
             <property name="spacesCountBeforeColon" value="0"/>
         </properties>
     </rule>
-    <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration">
+
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
         <properties>
-            <property name="enableEachParameterAndReturnInspection" value="true"/>
             <property name="traversableTypeHints" type="array">
+                <element value="Traversable"/>
+                <element value="Iterator"/>
+                <element value="IteratorAggregate"/>
                 <element value="Doctrine\Common\Collections\Collection"/>
-            </property>
-            <property name="usefulAnnotations" type="array">
-                <element value="@after"/>
-                <element value="@afterClass"/>
-                <element value="@AfterMethods"/>
-                <element value="@Attribute"/>
-                <element value="@Attributes"/>
-                <element value="@before"/>
-                <element value="@beforeClass"/>
-                <element value="@BeforeMethods"/>
-                <element value="@covers"/>
-                <element value="@coversDefaultClass"/>
-                <element value="@coversNothing"/>
-                <element value="@dataProvider"/>
-                <element value="@depends"/>
-                <element value="@deprecated"/>
-                <element value="@doesNotPerformAssertions"/>
-                <element value="@Enum"/>
-                <element value="@expectedDeprecation"/>
-                <element value="@expectedException"/>
-                <element value="@expectedExceptionCode"/>
-                <element value="@expectedExceptionMessage"/>
-                <element value="@expectedExceptionMessageRegExp"/>
-                <element value="@group"/>
-                <element value="@Groups"/>
-                <element value="@IgnoreAnnotation"/>
-                <element value="@internal"/>
-                <element value="@Iterations"/>
-                <element value="@link"/>
-                <element value="@ODM\"/>
-                <element value="@ORM\"/>
-                <element value="@Flow\"/>
-                <element value="@requires"/>
-                <element value="@Required"/>
-                <element value="@Revs"/>
-                <element value="@runInSeparateProcess"/>
-                <element value="@runTestsInSeparateProcesses"/>
-                <element value="@see"/>
-                <element value="@Target"/>
-                <element value="@test"/>
-                <element value="@throws"/>
-                <element value="@uses"/>
             </property>
         </properties>
     </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint">
+        <properties>
+            <property name="enableNativeTypeHint" value="false"/>
+            <property name="traversableTypeHints" type="array">
+                <element value="Traversable"/>
+                <element value="Iterator"/>
+                <element value="IteratorAggregate"/>
+                <element value="Doctrine\Common\Collections\Collection"/>
+            </property>
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint">
+        <properties>
+            <property name="traversableTypeHints" type="array">
+                <element value="Traversable"/>
+                <element value="Iterator"/>
+                <element value="IteratorAggregate"/>
+                <element value="Doctrine\Common\Collections\Collection"/>
+            </property>
+        </properties>
+    </rule>
+
     <rule ref="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint"/>
-    <rule ref="SlevomatCodingStandard.Types.EmptyLinesAroundTypeBraces">
+    <rule ref="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces">
         <properties>
             <property name="linesCountAfterOpeningBrace" value="0"/>
             <property name="linesCountBeforeClosingBrace" value="0"/>
@@ -309,12 +292,6 @@
     </rule>
     <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace.EmptyLines">
         <severity>5</severity>
-    </rule>
-    <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.UselessDocComment">
-        <exclude-pattern>Controller\.php</exclude-pattern>
-    </rule>
-    <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.UselessParameterAnnotation">
-        <exclude-pattern>Controller\.php</exclude-pattern>
     </rule>
     <rule ref="PEAR.Commenting.FunctionComment.MissingParamTag">
         <include-pattern>Controller\.php</include-pattern>
