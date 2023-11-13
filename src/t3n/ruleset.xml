@@ -30,8 +30,6 @@
     <rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier"/>
 
     <rule ref="Generic.Files.InlineHTML"/>
-    <rule ref="Generic.Formatting.SpaceAfterCast"/>
-    <rule ref="Generic.Formatting.SpaceAfterNot"/>
     <rule ref="Generic.NamingConventions.ConstructorName"/>
     <rule ref="Generic.PHP.CharacterBeforePHPOpeningTag"/>
     <rule ref="Generic.PHP.DeprecatedFunctions"/>
